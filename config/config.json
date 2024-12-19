@@ -1,14 +1,14 @@
 {
     "development": {
         "username": "antonio",
-        "password": "anto123",
+        "password": "pepsicola",
         "database": "vinos_development",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
     "test": {
         "username": "antonio",
-        "password": "anto123",
+        "password": "pepsicola",
         "database": "vinos_test",
         "host": "127.0.0.1",
         "dialect": "mysql"
