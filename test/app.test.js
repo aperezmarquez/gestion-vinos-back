@@ -11,8 +11,8 @@ describe("Tests Usuarios", () => {
             .set("Accept", "application/json")
             .expect(200)
 
-        expect(response.body.usuario.email).toEqual("antonio@example.com")
-        expect(response.body.usuario.role).toEqual("admin")
+        expect(response.body.email).toEqual("antonio@example.com")
+        expect(response.body.role).toEqual("admin")
     })
 
     it("should login a user", async () => {
@@ -22,8 +22,18 @@ describe("Tests Usuarios", () => {
             .set("Accept", "application/json")
             .expect(200)
 
-        expect(response.body.usuario.email).toEqual("antonio@example.com")
-        expect(response.body.usuario.role).toEqual("admin")
+        expect(response.body.email).toEqual("antonio@example.com")
+        expect(response.body.role).toEqual("admin")
         token = response.body.token
+    })
+
+    it("should check the token", async () => {
+        const response = await request(app)
+            .post("/api/usuarios/checkToken")
+            .send({ token: token })
+            .set("Accept", "application/json")
+            .expect(200)
+
+        expect(response.body).toEqual(true)
     })
 })

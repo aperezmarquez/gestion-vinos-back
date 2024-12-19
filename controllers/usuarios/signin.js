@@ -32,7 +32,7 @@ const signin = async (req, res) => {
                         algorithm: 'HS256'
                     }
                 )
-                res.status(200).json({usuario: usuario, token: token})   
+                res.status(200).json({id: usuario.id, email: usuario.email, role: usuario.role, token: token})   
             } else {
                 handleError(res, 'Contraseña incorrecta', 401)
             }

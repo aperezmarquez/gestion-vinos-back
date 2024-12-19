@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     precio_euros: DataTypes.INTEGER,
     precio_dolares: DataTypes.INTEGER,
     formato: DataTypes.STRING,
-    cosecha: DataTypes.STRING
+    cosecha: DataTypes.STRING,
+    cantidad: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'productos',

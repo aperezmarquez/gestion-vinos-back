@@ -45,7 +45,7 @@ const signup = async (req, res) => {
             return
         }
 
-        res.status(200).json({usuario: usuario_final, token: token})
+        res.status(200).json({id: usuario_final.id, email: usuario_final.email, role: usuario_final.role, token: token})
     } catch (error) {
         handleError(res, error, 400)
     }
