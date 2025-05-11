@@ -19,7 +19,7 @@ module.exports = {
       precio_dolares: {
         type: Sequelize.INTEGER
       },
-      formato: {
+      tipo: {
         type: Sequelize.STRING
       },
       cosecha: {
